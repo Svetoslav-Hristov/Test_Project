@@ -1,43 +1,61 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Towns</title>
-	<link rel="stylesheet" href="towns.css" />
+
+    <link rel="stylesheet" href="towns.css">
+
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="towns.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js"></script>
 </head>
 
 <body>
 
-<h1>Towns</h1>
+    <main class="container">
+        <h1>Towns</h1>
+        <p class="subtitle">Manage your list of towns</p>
 
-<!-- Styler HTML -->
+        <section class="card">
+            <h2>Available Towns</h2>
 
-<article>
-	<header>Towns</header>
-	<select id="towns" size="4">
-		<option>Sofia</option>
-		<option>Plovdiv</option>
-		<option>Varna</option>
-		<option>Bourgas</option>
-	</select>
-</article>
-	
-<article>
-    <header>Delete Existing Town</header>
-    <input type="text" id="townName" />
-    <button id="btnDelete">Delete</button>
-</article>
+            <select id="towns" size="4">
+                <option>Sofia</option>
+                <option>Plovdiv</option>
+                <option>Varna</option>
+                <option>Bourgas</option>
+            </select>
+        </section>
 
+        <section class="card">
+            <h2>Delete Existing Town</h2>
 
-<div id="result"></div>
+            <div class="form-row">
+                <input type="text" id="townName" placeholder="Enter town name">
+                <button id="btnDelete">Delete</button>
+            </div>
+        </section>
 
-<!-- Styler Scripts -->
+        <section class="card">
+            <h2>Shuffle Towns</h2>
+            <button id="btnShuffle">Shuffle</button>
+        </section>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js"></script>
+        <section class="card">
+            <h2>Add New Town</h2>
 
+            <div class="form-row">
+                <input type="text" id="townNameForAdd" placeholder="Enter new town name">
+                <button id="btnAdd">Add</button>
+            </div>
+        </section>
+
+        <div id="result" class="result" role="status" aria-live="polite"></div>
+    </main>
 
 </body>
-
 </html>
